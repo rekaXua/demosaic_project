@@ -13,7 +13,7 @@ To have a dicent performance you need a **CUDA+cudnn or ROCm compatible GPU** wi
 
 **HOW TO USE:**
 1) Place your images inside decensor_input
-2) Run python demosaic_project_ESRGAN.py or (python demosaic_project_ESRGAN.py --cpu for cpu version)
+2) Run "python demosaic_project_ESRGAN.py" or ("python demosaic_project_ESRGAN.py --cpu" for cpu version)
 3) Take your decensored images from decensor_output
 4) ???
 5) Profit
