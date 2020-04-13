@@ -11,6 +11,13 @@ Removing Pixelated Mosaic Censorship using [ESRGAN (Enhanced SRGAN)](https://git
 
 To have a dicent performance you need a **CUDA+cudnn or ROCm compatible GPU** with installed drivers! Otherweis  use "--cpu" key, but beware it can be VERY slow.
 
+How to use:
+1) Place your images inside decensor_input
+2) Run python demosaic_project_ESRGAN.py or (python demosaic_project_ESRGAN.py --cpu for cpu version)
+3) Take your decensored images from decensor_output
+4) ???
+5) Profit
+
 **Don't forget to install python3 and all the requirements with command "pip3 install -r requirements.txt" in cmd or bash**
 <p align="center">
   <img src="https://github.com/rekaxua/demosaic_project/blob/master/decensor_input/asuka.jpg" width="400">
