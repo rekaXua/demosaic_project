@@ -21,6 +21,8 @@ os.makedirs(outdir, exist_ok=True)
 files = glob.glob(rootdir + '/**/*.png', recursive=True)
 files_jpg = glob.glob(rootdir + '/**/*.jpg', recursive=True)
 files.extend(files_jpg)
+files_jpeg = glob.glob(rootdir + '/**/*.jpeg', recursive=True)
+files.extend(files_jpeg)
 
 #-----------------------ESRGAN-Init-----------------------
 import architecture as arch
@@ -50,7 +52,7 @@ GBlur = 5
 CannyTr1 = 15
 CannyTr2 = 130
 LowRange = 2
-HighRange = 20
+HighRange = 80
 DetectionTr = 0.3
 
 pattern = [None] * (HighRange+2)
