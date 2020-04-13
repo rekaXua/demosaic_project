@@ -1,7 +1,7 @@
 # demosaic_project
 Removing Pixelated Mosaic Censorship using [ESRGAN (Enhanced SRGAN)](https://github.com/xinntao/ESRGAN) and [green_mask_project](https://github.com/rekaXua/green_mask_project)
 
-ESRGAN model should be downloaded here: Twittman's [4x_FatalPixels_340000_G.pth](https://de-next.owncube.com/index.php/s/mDGmi7NgdyyQRXL/download?path=%2F&files=4x_FatalPixels_340000_G.pth), and placed into models folder!
+**ESRGAN model should be downloaded here: Twittman's [4x_FatalPixels_340000_G.pth](https://de-next.owncube.com/index.php/s/mDGmi7NgdyyQRXL/download?path=%2F&files=4x_FatalPixels_340000_G.pth), and placed into models folder!**
 
 [![GitHub issues](https://img.shields.io/github/issues/rekaXua/demosaic_project.svg?label=Issues)](https://github.com/rekaXua/demosaic_project/issues)
 [![GitHub downloads](https://img.shields.io/github/downloads/rekaXua/demosaic_project/total.svg?label=Downloads)](https://github.com/rekaXua/demosaic_project/releases)
