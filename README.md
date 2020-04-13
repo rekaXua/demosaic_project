@@ -20,9 +20,8 @@ To have a dicent performance you need a **CUDA+cudnn or ROCm compatible GPU** wi
 **TODO:**
 - GUI
 - Config file
-- Better detection algorithm
+- Better detection algorithm  
 
-Inspiration from [DeepCreamPy](https://github.com/deeppomf/DeepCreamPy) and [hent-AI](https://github.com/natethegreate/hent-AI)
-
+Inspiration from [DeepCreamPy](https://github.com/deeppomf/DeepCreamPy) and [hent-AI](https://github.com/natethegreate/hent-AI)  
 Using [Twittman's](https://github.com/alsa64/AI-wiki/wiki/Model-Database) trained model fatal pixels.
 *Sample image by hks(@timbougami)*
