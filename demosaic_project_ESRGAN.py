@@ -53,7 +53,7 @@ CannyTr1 = 15
 CannyTr2 = 130
 LowRange = 2
 HighRange = 80
-DetectionTr = 0.3
+DetectionTr = 0.29
 
 pattern = [None] * (HighRange+2)
 for masksize in range(HighRange+2, LowRange+1, -1):
