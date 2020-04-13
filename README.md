@@ -13,8 +13,8 @@ To have a dicent performance you need a **CUDA+cudnn or ROCm compatible GPU** wi
 
 **Don't forget to install python3 and all the requirements with command "pip3 install -r requirements.txt" in cmd or bash**
 <p align="center">
-  <img src="https://github.com/rekaxua/demosaic_project/blob/master/decensor_input/asuka.png" width="400">
-  <img src="https://github.com/rekaxua/demosaic_project/blob/master/decensor_output/asuka.png" width="400">
+  <img src="https://github.com/rekaxua/demosaic_project/blob/master/decensor_input/asuka.jpg" width="400">
+  <img src="https://github.com/rekaxua/demosaic_project/blob/master/decensor_output/asuka.jpg" width="400">
 </p>
 
 **TODO:**
