@@ -82,13 +82,13 @@ for f in files:
 	img_gray = cv2.Canny(img_gray,CannyTr1,CannyTr2)
 	img_gray = 255-img_gray
 	img_gray = cv2.GaussianBlur(img_gray,(GBlur,GBlur),0)
-	
+
 	#-----------------------Detection-----------------------
 	resolutions = [-1] * (HighRange+2)
 	for masksize in range(HighRange+2, LowRange+1, -1):
 		template = cv2.cvtColor(np.array(pattern[masksize-2]), cv2.COLOR_BGR2GRAY)
 		w, h = pattern[masksize-2].size[::-1]
-	
+
 		img_detection = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
 		loc = np.where(img_detection >= DetectionTr)
 		rects = 0
@@ -113,12 +113,12 @@ for f in files:
 		ExtremasSum.append(sum(Extremas[i][1]))
 		if BigExtrema[0] <= sum(Extremas[i][1])+int(sum(Extremas[i][1])*0.05):    #5% precedency for smaller resolution
 			if max(BigExtrema[2]) < max(Extremas[i][1])+max(Extremas[i][1])*0.15:
-				BigExtrema = [sum(Extremas[i][1]),Extremas[i][0],Extremas[i][1]]	
+				BigExtrema = [sum(Extremas[i][1]),Extremas[i][0],Extremas[i][1]]
 	MosaicResolutionOfImage = BigExtrema[1]+BigExtrema[2].index(max(BigExtrema[2]))    #Output
 	if MosaicResolutionOfImage == 0:    #If nothing found - set resolution as smallest
 		MosaicResolutionOfImage = HighRange+1
 	print('Mosaic Resolution of "' + os.path.basename(f) + '" is: ' + str(MosaicResolutionOfImage))    #The Resolution of Mosaiced Image
-	
+
 	#DEBUG Show image
 	#cv2.imshow('image',card)
 	#cv2.waitKey(0)
@@ -134,10 +134,10 @@ for f in files:
 		shrinkedI = cv2.resize(shrinkedI, (int(Sx/maxres),int(Sy/maxres)))
 	#print(maxres)
 	while True:
-		
+
 		imgESR = cv2.cvtColor(shrinkedI, cv2.COLOR_RGBA2RGB)
 		imgESR = imgESR * 1.0 / 255
-		
+
 		imgESR = torch.from_numpy(np.transpose(imgESR[:, :, [2, 1, 0]], (2, 0, 1))).float()
 		img_LR = imgESR.unsqueeze(0)
 		img_LR = img_LR.to(device)
@@ -171,9 +171,9 @@ for f in files:
 	mosaic_reg = cv2.bitwise_and(imgESRbig,imgESRbig,mask = card_inv)
 	img_C = cv2.cvtColor(np.array(img_C), cv2.COLOR_BGRA2RGBA)
 	out = np.array(Image.alpha_composite(Image.fromarray(img_C), Image.fromarray(mosaic_reg)))
-	f=f.replace(rootdir, outdir, 1) 
+	f=f.replace(rootdir, outdir, 1)
 	os.makedirs(os.path.dirname(f), exist_ok=True)
-	
+
 	res, im = cv2.imencode(os.path.basename(f), out)
 	with open(f, 'wb') as fout:
 		fout.write(im.tobytes())
