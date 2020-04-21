@@ -49,10 +49,10 @@ model = model.to(device)
 # DetectionTr = 0.32
 
 GBlur = 5
-CannyTr1 = 15
-CannyTr2 = 130
+CannyTr1 = 8
+CannyTr2 = 30
 LowRange = 2
-HighRange = 80
+HighRange = 25
 DetectionTr = 0.29
 
 pattern = [None] * (HighRange+2)

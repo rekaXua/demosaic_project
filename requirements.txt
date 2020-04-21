@@ -1,7 +1,7 @@
 glob3
-torch==1.2.0
-torchvision
 opencv_python==4.0.0.21
 scipy==1.3.0
 numpy==1.17.4
 Pillow==7.1.1
+torch -f https://download.pytorch.org/whl/torch_stable.html
+torchvision -f https://download.pytorch.org/whl/torch_stable.html
