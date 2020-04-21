@@ -96,7 +96,7 @@ for f in files:
 			rects += 1    #increase rectangle count of single resolution
 			cv2.rectangle(card, pt, (pt[0] + w, pt[1] + h), (0,0,0,255), -1)
 		resolutions[masksize-1] = rects
-
+	#-----------------------Calculating-Resolution-----------------------
 	resolutions.append(0)
 #	print(resolutions)    #DEBUG Resolutions array
 	extremaMIN = argrelextrema(np.array(resolutions), np.less, axis=0)[0]

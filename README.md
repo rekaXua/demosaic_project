@@ -11,6 +11,13 @@ Removing Pixelated Mosaic Censorship using [ESRGAN (Enhanced SRGAN)](https://git
 
 To have a decent performance you need a **CUDA+cudnn or ROCm compatible GPU** with installed drivers! Otherweis  use "--cpu" key, but beware it can be VERY slow.
 
+**HOW TO USE:**
+1) Place your images inside decensor_input
+2) Run "python demosaic_project_ESRGAN.py" or ("python demosaic_project_ESRGAN.py --cpu" for cpu version)
+3) Take your decensored images from decensor_output
+4) ???
+5) Profit
+
 **Don't forget to install python3 and all the requirements with command "pip3 install -r requirements.txt" in cmd or bash**
 <p align="center">
   <img src="https://github.com/rekaxua/demosaic_project/blob/master/decensor_input/asuka.jpg" width="400">
@@ -23,6 +30,6 @@ To have a decent performance you need a **CUDA+cudnn or ROCm compatible GPU** wi
 - Better detection algorithm  
   
 Inspiration from [DeepCreamPy](https://github.com/deeppomf/DeepCreamPy) and [hent-AI](https://github.com/natethegreate/hent-AI)  
-Using [Twittman's](https://github.com/alsa64/AI-wiki/wiki/Model-Database) trained model fatal pixels.  
+Credits to [Twittman](https://github.com/alsa64/AI-wiki/wiki/Model-Database) for making trained model [Fatal Pixels](https://de-next.owncube.com/index.php/s/mDGmi7NgdyyQRXL).  
   
 *Sample image by hks(@timbougami)*
