@@ -9,7 +9,7 @@ Removing Pixelated Mosaic Censorship using [ESRGAN (Enhanced SRGAN)](https://git
 [![Twitter Follow](https://img.shields.io/twitter/follow/Alexander_rekaX.svg?label=Alexander_rekaX&style=flat&logo=twitter)](https://twitter.com/Alexander_rekaX/)
 [![Donate with PayPal](https://img.shields.io/badge/PayPal-Donate-gray.svg?logo=paypal&label=)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PDS9QQPVNUERE)
 
-To have a decent performance you need a **(CUDA)[https://developer.nvidia.com/cuda-toolkit-archive] + (cudnn)[https://developer.nvidia.com/rdp/cudnn-download] or (ROCm)[https://rocm.github.io/languages.html] compatible GPU** with installed drivers! Otherweis  use "--cpu" key, but beware it can be VERY slow.
+To have a decent performance you need a **[CUDA](https://developer.nvidia.com/cuda-toolkit-archive)+[cudnn](https://developer.nvidia.com/rdp/cudnn-download) or [ROCm](https://rocm.github.io/languages.html) compatible GPU** with installed drivers! Otherweis  use "--cpu" key, but beware it can be VERY slow.
 
 **HOW TO USE:**
 1) Place your images inside decensor_input
