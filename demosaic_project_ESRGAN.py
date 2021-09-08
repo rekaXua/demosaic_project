@@ -26,7 +26,10 @@ files.extend(files_jpeg)
 
 #-----------------------ESRGAN-Init-----------------------
 import architecture as arch
-GPUmem = torch.cuda.get_device_properties(0).total_memory
+if not args.cpu:
+	GPUmem = torch.cuda.get_device_properties(0).total_memory
+else:
+	GPUmem = int(input('Please write the amount of RAM in bytes for the program to use (for example 16000000000 for 16GB), or press Enter for 16GB: ') or int(16000000000))
 
 model_path = "models/4x_FatalPixels_340000_G.pth"  # models/RRDB_ESRGAN_x4.pth OR models/RRDB_PSNR_x4.pth
 device = torch.device('cpu' if args.cpu else 'cuda')  # if you want to run on CPU, change 'cuda' -> cpu
